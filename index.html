@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Relationship Timeline</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Our Story</h1>
+        <p class="subtitle">A timeline of our most cherished moments together</p>
+    </header>
+
+    <main>
+        <div class="timeline-container">
+            <div id="timeline" class="timeline">
+                <!-- Timeline events will be populated here via JavaScript -->
+                <div class="timeline-loader">Loading our memories...</div>
+            </div>
+        </div>
+    </main>
+
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modal-content-container">
+                <!-- Modal content will be populated here via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 - Our Journey Together</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

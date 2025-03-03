@@ -1,0 +1,285 @@
+/* Base styles and variables */
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #f7f7f7;
+    --accent-color: #e8a87c;
+    --text-color: #333333;
+    --timeline-line-color: #ddd;
+    --timeline-point-color: var(--primary-color);
+    --timeline-card-bg: white;
+    --timeline-card-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    --timeline-card-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+    padding: 0;
+    margin: 0;
+}
+
+/* Header and Footer */
+header, footer {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #666;
+}
+
+/* Timeline Container */
+.timeline-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: var(--timeline-line-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Timeline Events */
+.timeline-event {
+    position: relative;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.timeline-event:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 1.5rem;
+    background: var(--timeline-card-bg);
+    border-radius: 8px;
+    box-shadow: var(--timeline-card-shadow);
+    transition: all var(--transition-speed) ease;
+    cursor: pointer;
+}
+
+.timeline-content:hover {
+    box-shadow: var(--timeline-card-hover-shadow);
+    transform: translateY(-5px);
+}
+
+.timeline-event:nth-child(odd) .timeline-content {
+    float: left;
+}
+
+.timeline-event:nth-child(even) .timeline-content {
+    float: right;
+}
+
+.timeline-point {
+    position: absolute;
+    top: 1.5rem;
+    width: 16px;
+    height: 16px;
+    background: var(--timeline-point-color);
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-date {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-title {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.6rem;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+.timeline-description {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.timeline-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 1rem;
+    max-height: 180px;
+    object-fit: cover;
+}
+
+/* Clearfix for timeline events */
+.timeline-event::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: 10% auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close-button {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    color: #aaa;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: var(--text-color);
+}
+
+.modal-image {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.modal-date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.modal-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Loading state */
+.timeline-loader {
+    text-align: center;
+    padding: 2rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 60px);
+        float: right;
+        margin-left: 60px;
+    }
+    
+    .timeline-event:nth-child(odd) .timeline-content,
+    .timeline-event:nth-child(even) .timeline-content {
+        float: right;
+    }
+    
+    .timeline-point {
+        left: 30px;
+    }
+    
+    .modal-content {
+        width: 90%;
+        margin: 15% auto;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .timeline-content {
+        padding: 1rem;
+    }
+    
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-description {
+        font-size: 0.9rem;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+    }
+}

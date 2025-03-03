@@ -1,0 +1,60 @@
+{
+    "events": [
+      {
+        "id": 1,
+        "title": "First Meeting",
+        "date": "2023-01-15",
+        "description": "We met at a mutual friend's birthday party. You were wearing that blue jacket I still love.",
+        "detailedDescription": "I remember being instantly drawn to your laugh from across the room. We talked for hours about our favorite books and discovered we both loved the same obscure author. It felt like the universe conspired to bring us together that night.",
+        "image": "images/first-meeting.jpg"
+      },
+      {
+        "id": 2,
+        "title": "First Date",
+        "date": "2023-01-28",
+        "description": "Coffee at that little café downtown. You were 10 minutes late but made up for it with your enthusiasm.",
+        "detailedDescription": "You texted that you were running late because you stopped to help someone with a flat tire. That's when I knew you were special - putting others before yourself, even when it meant being late for our first date. We stayed until the café closed, lost in conversation.",
+        "image": "images/first-date.jpg"
+      },
+      {
+        "id": 3,
+        "title": "First Kiss",
+        "date": "2023-02-14",
+        "description": "Valentine's Day picnic at the park. The sunset was perfect.",
+        "detailedDescription": "I was so nervous planning that picnic. I remember checking the weather forecast obsessively for days. When you kissed me as the sun was setting over the lake, everything felt right in the world. The playlist I made for that evening still makes me smile whenever I hear it.",
+        "image": "images/first-kiss.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Weekend Getaway",
+        "date": "2023-04-22",
+        "description": "Our spontaneous road trip to the coast. We got lost twice but discovered that amazing seafood shack.",
+        "detailedDescription": "I'll never forget how you insisted on taking the scenic route, which added two hours to our drive but led us to that hidden beach no one else was at. We collected seashells and built an embarrassingly lopsided sandcastle. That night, watching the stars from our blanket on the beach, I realized I was falling in love with you.",
+        "image": "images/weekend-trip.jpg"
+      },
+      {
+        "id": 5,
+        "title": "Said 'I Love You'",
+        "date": "2023-05-30",
+        "description": "You said it first, while we were making dinner together in your kitchen.",
+        "detailedDescription": "We were making your grandmother's pasta recipe. You had flour on your nose, and I was about to tell you when you just looked at me and said those three words. I dropped the wooden spoon I was holding, and we both laughed before I said it back. The pasta was overcooked, but it was still the best meal I've ever had.",
+        "image": "images/i-love-you.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Moving In Together",
+        "date": "2023-09-15",
+        "description": "The day we got the keys to our apartment. We celebrated with takeout on the floor since we had no furniture yet.",
+        "detailedDescription": "We spent hours debating where each piece of furniture should go. I'll never forget how you insisted the bookshelf needed to be in the living room so visitors would know we're 'intellectuals'. We ate Chinese food from the containers and talked about all the memories we would make in our new home. That night, sleeping on a mattress on the floor, I felt like the luckiest person alive.",
+        "image": "images/moving-in.jpg"
+      },
+      {
+        "id": 7,
+        "title": "Anniversary Trip",
+        "date": "2024-01-15",
+        "description": "Our trip to the mountains to celebrate one year together. The cabin, the snow, the fireplace - pure magic.",
+        "detailedDescription": "I secretly arranged for the cabin owner to stock the fridge with all your favorite foods and that special wine we had on our third date. When you discovered the surprise picnic basket, your eyes lit up in a way I'll never forget. Sitting by the fireplace, watching the snow fall outside, I knew I wanted a lifetime of anniversaries with you.",
+        "image": "images/anniversary.jpg"
+      }
+    ]
+  }
